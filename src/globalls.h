@@ -1,8 +1,3 @@
-/************************************************************************************************
-*                                       globalls.h			                                    *
-*				©2011 by closed (joint-stock) company "SENS". All rights reserved.  			*
-*									Written by I.Filippov										*
-************************************************************************************************/
 #ifndef __globalls
 #define __globalls
 
@@ -11,21 +6,18 @@
 #include "packets.h"
 #include "sx1211driver.h"
 
-/* ѕорты */
-//#define LED_PORT	P4OUT	//порт светодиода
-//#define	BLUE		BIT4	//
+
 #if defined(__msp430x23x0)
-	#define LED_PORT	P4OUT	//порт светодиода
-	#define	LED_PIN		BIT5	//пин светодиода
+	#define LED_PORT	P4OUT
+	#define	LED_PIN		BIT5
 #elif defined(__msp430x22x2)
-	#define LED_PORT	P1OUT	//порт светодиода
-	#define	LED_PIN     BIT1	//пин светодиода
+	#define LED_PORT	P1OUT
+	#define	LED_PIN     BIT1
 #endif
 
-/* ћакросы */
-#define	LED_ON(Led)			(LED_PORT &= ~Led)	//зажечь светодиод
-#define	LED_OFF(Led)  		(LED_PORT |=  Led)	//погасить светодиод
-#define	TOGGLE_LED(Led)     (LED_PORT ^=  Led)	//xor светодиод
+#define	LED_ON(Led)			(LED_PORT &= ~Led)
+#define	LED_OFF(Led)  		(LED_PORT |=  Led)
+#define	TOGGLE_LED(Led)     (LED_PORT ^=  Led)
 
 #define	SWAPB(Word)				    ((unsigned short)((Word) << 8) | ((Word) >> 8))
 #define	TACCR0_ENABLE(TaInterval)	{TACCTL0 &= ~CCIFG; TACCR0 = TaInterval; TACCTL0 |= CCIE;}

@@ -1,15 +1,8 @@
-/************************************************************************************************
-*                                         mytypes.h                                             *
-*				©2010 by closed (joint-stock) company "SENS". All rights reserved.  			*
-*									Written by I. Filippov										*
-************************************************************************************************/
 #ifndef   __mytypes
 #define   __mytypes
 
 #include <stdbool.h>
 #include <stdlib.h>
-
-//Пользовательские типы
 
 #ifndef __uint8_t__
 typedef unsigned char uint8_t;

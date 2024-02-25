@@ -1,8 +1,3 @@
-/************************************************************************************************
-*                            File msp430f2x.c - msp430x2x initialization                        *
-*                ©2011 by closed (joint-stock) company "SENS". All rights reserved.             *
-*                                        Written by I.Filippov                                  *
-************************************************************************************************/
 #include  "msp430f2x.h"
 
 extern const uint16_t TaInterval;
